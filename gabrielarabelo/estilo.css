@@ -1,26 +1,82 @@
 @charset "UTF-8";
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Adiciona box-sizing globalmente */
+}
+
 body {
-    background-color: rgba(255, 192, 203, 0.573);
-    border-radius: 150px;
-    padding: 0px;
-    margin: 0px;
+    background: linear-gradient(to left, gray, white);
+    color: #e0e0e0; /* Cor de texto clara para contraste com o fundo preto */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+h1 {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    color: #ffffff; /* Cor do título */
+    font-size: 20px;
 }
 
 main {
-    background-color: whitesmoke;
-    padding: 15px;
-    margin: 0px;
-    text-align: right;
-}
-
-section {
-    background-color: aqua;
-    padding: 150px;
-    margin: 0px;
-}
-
-.tittle {
-    color: white;
+    font-size: 40px;
     text-align: center;
+    color: #ffffff; /* Cor do texto principal */
+}
+
+div.project, div.skills {
+    padding: 50px;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espaço igual entre os cards */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: linear-gradient(to left, rgb(174, 166, 166), gray);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px; /* Reduz o tamanho máximo dos cards */
+    margin: 20px; /* Aumenta o espaçamento entre os cards */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom quando o card é hover */
+}
+
+.card img {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura do card */
+    height: 100px; /* Define uma altura fixa menor para as imagens */
+    margin: 0 auto;
+    display: block;
+    object-fit: contain; /* Corta a imagem para preencher o espaço */
+}
+
+.card-content {
+    padding: 20px; /* Ajusta o padding para menos */
+    color: white;
+}
+
+.card-title {
+    font-size: 1.6em; /* Diminui o tamanho do título */
+    margin: 15px 0;
+    color: #ffffff; /* Cor do título no card */
+}
+
+.card-text {
+    color: #cccccc; /* Cor do texto no card */
+    font-size: 1.5em; /* Diminui o tamanho do texto */
 }
