@@ -17,6 +17,7 @@ body {
 h1 {
     padding:8rem;
     color: rgb(255, 35, 119);
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.907);
     flex-basis: auto;
     text-align: center;
     font-family: 'Name';
@@ -93,9 +94,9 @@ h2 {
 
   .project {
     color: white;
-   background: linear-gradient(pink, #a5bee6, #83e2a6);
+   background-color: grey;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #f4277c;
     padding: 20px;
     margin: 10px;
 }
@@ -124,10 +125,45 @@ nav ul {
 nav ul li {
     margin: 0 10px; 
 }
+
+.contatos {
+  display: flex; 
+  justify-content: center
+  ; 
+  padding: 0; 
+  margin: 0; 
+  list-style: none; 
+}
+
+.icons {
+  display: flex; 
+  list-style: none;
+}
+
+.icons li {
+  margin: 0 10px; 
+}
+
+.icons li a {
+  color: inherit;
+  text-decoration: none; 
+  font-size: 34px; 
+  
+}
+
+.icons li a.fa-brands.fa-square-instagram,
+.icons li a.fa-brands.fa-linkedin,
+.icons li a.fa-brands.fa-square-github {
+color: #ff1074; 
+}
+
+.icons li a:hover {
+  color: #f9a9e9; 
+}
   
   
 footer {
-    background-color: rgba(0, 0, 0, 0.407);
+    background-color: rgba(145, 145, 145, 0.14);
     color: white;
     padding: 10px;
     font-size: 0.9em;
