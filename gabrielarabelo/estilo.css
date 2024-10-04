@@ -217,3 +217,89 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+/* Estilos para celulares pequenos */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  section input, section button {
+    width: 100%;
+  }
+
+  .item-resultado h2 {
+    font-size: 1.2rem;
+  }
+
+  section {
+    margin-bottom: 1.2rem;
+  }
+
+  .resultados-pesquisa {
+    width: 90%;
+    height: auto;
+  }
+
+  .item-resultado {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .item-resultado h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos para celulares e tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+  section input, section button {
+    width: 100%;
+  }
+  .resultados-pesquisa {
+    width: 100%;
+  }
+}
+
+/* Estilos para tablets e pequenos laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  section input, section button {
+    width: 80%;
+  }
+  .resultados-pesquisa {
+    width: 80%;
+  }
+}
+
+/* Estilos para telas maiores e TVs */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 7.5rem;
+  }
+  section {
+    margin-bottom: 4rem;
+  }
+  section input, section button {
+    width: 30rem;
+  }
+  .resultados-pesquisa {
+    width: 60rem;
+  }
+}
