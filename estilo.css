@@ -1,20 +1,28 @@
 @charset "UTF-8";
 
 * {
-  padding: 10px;
+  padding: 0px;
   margin: 0px;
   position: relative;
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: url(imagens/2k_stars.jpg);
   background-size: contain;
+  position: static;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
-  padding: 5rem;
+  padding: 2rem;
   color: rgb(210, 38, 240);
-  text-shadow: 2px 2px rgb(255, 255, 255);
+  text-shadow: 1px 0.9px rgb(255, 255, 255);
   flex-basis: auto;
   text-align: left;
   font-family:'Times New Roman', Times, serif;
@@ -26,7 +34,7 @@ h2 {
   margin: 20px;
   text-align: center;
   color: rgb(218, 145, 240);
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -38,12 +46,12 @@ h3 {
 
 .history {
   max-width: 600%;
-  text-align: center;
+  text-align: justify;
   margin: 10px;
   display: grid;
   color: white;
- font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
 }
 
 .cards {
@@ -57,18 +65,18 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: stretch;
-  flex-direction: column;
+  flex-direction:column;
   text-align: center;
-  height: 200px;
-  width: 200px;
+  
   border-radius: 10px;
   padding: 20px;
+  margin: 10px;
   color: white;
   background-color: rgba(22, 22, 22, 0.573);
   cursor: pointer;
   transition: 400ms;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 3px 7px 10px rgb(55, 10, 63);
+  box-shadow: 3px 7px 10px rgba(215, 143, 228, 0.753);
 }
 
 .cards .card p.tip {
@@ -89,39 +97,74 @@ h3 {
   transform: scale(0.9, 0.9);
 }
 
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Exibe os projetos como cards em colunas flexíveis */
+  gap: 20px;
+  padding: 20px;
+}
+
 .project {
-  color: white;
+  color: rgb(211, 135, 238);
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 15px;
   padding: 20px;
   margin: 10px;
+
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease ;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project:hover {
+  transform: translateY(-10px); /* Move o card para cima */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
 }
 
 .project p {
   font-size: 0.9rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(235, 235, 235);
 }
 
 .project img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.05); /* Aumenta levemente a imagem ao passar o mouse */
+}
+
+.project a {
+  text-decoration: none;
+  color: #f9a9e9; /* Cor do link */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transição suave para a cor do link */
+}
+
+.project a:hover {
+  color: #ff1074; /* Cor do link ao passar o mouse */
 }
 
 a:link {
-  color: white;
+  color: rgb(224, 202, 244);
   text-decoration: none;
 }
 
 a:hover {
-  color: #ff1074;
+  color: #ffffff;
   text-decoration: underline;
 }
 
 a:visited {
   text-decoration: none;
-  color: red;
+  color: rgb(212, 120, 230);
 }
 
 nav {
@@ -129,7 +172,7 @@ nav {
   right: 0;
   color: pink;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction:row-reverse;
   align-items: center;
   font-size: 15px;
   font-weight: bolder;
@@ -146,9 +189,15 @@ nav ul {
   cursor: pointer;
   transition: all 0.3s;
   color: rgb(245, 155, 209);
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 500;
 }
+
+nav ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 nav ul li {
   margin: 0 10px;
@@ -163,8 +212,9 @@ nav ul li:hover {
 }
 
 section {
-  transition: all 0.5s ease-in-out; /* Ajusta a duração e a função de tempo */
-}
+  transition: all 0.5s ease-in-out; 
+} 
+
 
 .contatos {
   display: flex;
@@ -187,16 +237,18 @@ section {
   color: inherit;
   text-decoration: none;
   font-size: 34px;
+  transition: transform 0.3s eae, color 0.3s ease;
 }
 
 .icons li a.fa-brands.fa-square-instagram,
 .icons li a.fa-brands.fa-linkedin,
 .icons li a.fa-brands.fa-square-github {
-  color: rgb(103, 27, 116);
+color: rgb(210, 116, 226);
 }
 
 .icons li a:hover {
-  color: #f9a9e9;
+  color: #e6b3dc;
+  transform: scale(1.2);
 }
 
 footer {
@@ -217,7 +269,7 @@ footer p {
 /* Estilos para celulares pequenos */
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 
   section {
