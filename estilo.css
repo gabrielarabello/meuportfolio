@@ -1,12 +1,10 @@
 @charset "UTF-8";
 
 * {
-  padding: 0px;
-  margin: 0px;
-  position: relative;
-  cursor: pointer;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-
+  cursor: pointer;
 }
 
 html {
@@ -14,206 +12,151 @@ html {
 }
 
 body {
-  background-image: url(imagens/2k_stars.jpg);
-  background-size: contain;
-  position: static;
-  height: 100vh;
-  width: 100vw;
+  background-image: url(imagens/thumb-1920-533199.png);
+  animation: myAnimation 10s infinite;
+  color: white;
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-  padding: 2rem;
+@keyframes myAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 5px;
+}
+
+header .intro h1 {
   color: rgb(210, 38, 240);
   text-shadow: 1px 0.9px rgb(255, 255, 255);
-  flex-basis: auto;
-  text-align: left;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 30px;
+  font-size: 3rem;
+  margin-bottom: 1rem; 
 }
 
-h2 {
-  padding: 15px;
-  margin: 0px;
-  text-align: center;
-  color: rgb(218, 145, 240);
-  font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-h3 {
-  padding: 1px;
-  margin: 0px;
-  font-size: 15px;
-}
-
-.history {
-  max-width: 600%;
-  text-align: justify;
-  margin: 10px;
-  display: grid;
+header .btn {
+  padding: 10px 20px;
+  background-color: rgb(210, 38, 240);
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.cards .card{
-  display: flex;
-  align-items: center;
-  justify-content: stretch;
-  flex-direction: row;
-  text-align: center;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
+header .btn:hover {
+  background-color: #ff1074;
   color: white;
-  background-color: rgba(22,22,22, 0.573);
-  transition: 400ms;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 3px 7px 10px  rgba(215,143,228,0.75) ;
-}
-
-.cards .card p.tip {
-  font-size: 1em;
-  font-weight: 800;
-}
-
-.cards .card p.second-text {
-  font-size: 0.9em;
-}
-
-.cards .card:hover {
-  transform: scale(1.1,1.1);
-}
-
-.cards:hover > .card:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.9,0.9);
-}
-
-.project-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Exibe os projetos como cards em colunas flexíveis */
-  gap: 20px;
-  padding: 20px;
-}
-
-.project {
-  color: rgb(211, 135, 238);
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 10px;
-
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease ;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.project:hover {
-  transform: translateY(-10px); /* Move o card para cima */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
-}
-
-.project p {
-  margin: 10px;
-  font-size: 0.9rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(235, 235, 235);
-}
-
-.project img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.project img:hover {
-  transform: scale(1.05); /* Aumenta levemente a imagem ao passar o mouse */
-}
-
-.project a {
-  text-decoration: none;
-  color: #f9a9e9; /* Cor do link */
-  font-weight: bold;
-  transition: color 0.3s ease; /* Transição suave para a cor do link */
-}
-
-.project a:hover {
-  color: #ff1074; /* Cor do link ao passar o mouse */
-}
-
-a:link {
-  color: rgb(224, 202, 244);
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-a:visited {
-  text-decoration: none;
-  color: rgb(212, 120, 230);
-}
-
-nav {
-  top: 0;
-  right: 0;
-  color: pink;
-  display: flex;
-  flex-direction:row-reverse;
-  align-items: center;
-  font-size: 15px;
-  font-weight: bolder;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  border-radius: 7px;
-  border: 2px solid transparent;
-  padding: 10px 40px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
-  color: rgb(245, 155, 209);
-  font-size: 1em;
-  font-weight: 500;
-}
+  justify-content: right;
+ padding: 1em 0px;
 
-nav ul li a:hover {
-  color: #ffffff;
-  text-decoration: underline;
 }
-
 
 nav ul li {
   margin: 0 10px;
 }
 
-nav ul li:hover {
-  color: white;
-  box-shadow: none;
-  opacity: 80%;
-  text-decoration: double;
-  cursor: pointer;
+nav ul li a {
+  text-decoration: none;
+  color: rgb(245, 155, 209);
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-section {
-  transition: all 0.5s ease-in-out; 
-} 
+nav ul li a:hover {
+  color: #ff1074;
+}
+
+main {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(218, 145, 240);
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2rem; 
+}
+
+.history {
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 3rem; 
+}
+
+.card-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  margin: 20px; /* Adiciona margem entre os cards */
+}
+
+.card-image img {
+  background-color: rgba(69, 69, 69, 0.468);
+  box-shadow: 3px 7px 10px rgba(215, 143, 228, 0.75);
+  width: 150px; /* Define a largura de cada card */
+  height: 150px; /* Define a altura de cada card */
+  margin: 10px; /* Adiciona margem entre as imagens */
+  border-radius: 5px; /* Arredonda os cantos dos cards */
+  object-fit: cover; /* Faz com que a imagem preencha todo o card, mantendo a proporção */
+}
+
+.card-image img:hover {
+  transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+
+}
+
+.project-container {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 3rem; 
+}
+
+.project {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(22,22,22, 0.573);
+  box-shadow: 3px 7px 10px rgba(215, 143, 228, 0.75);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.503);
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+a {
+  color: rgb(180, 128, 228);
+}
+
+a:hover {
+  color: #ff1074;
+}
+
 
 .contatos {
   display: flex;
@@ -224,8 +167,8 @@ section {
 }
 
 .icons {
-  display: flex;
   list-style: none;
+  display: flex;
 }
 
 .icons li {
@@ -236,19 +179,20 @@ section {
   color: inherit;
   text-decoration: none;
   font-size: 34px;
-  transition: transform 0.3s eae, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icons li a.fa-brands.fa-square-instagram,
 .icons li a.fa-brands.fa-linkedin,
 .icons li a.fa-brands.fa-square-github {
-color: rgb(210, 116, 226);
+  color: rgba(210,116,226);
 }
 
 .icons li a:hover {
-  color: #e6b3dc;
+  color: #ff1074;
   transform: scale(1.2);
 }
+
 
 footer {
   background-color: rgba(145, 145, 145, 0.14);
@@ -265,102 +209,125 @@ footer p {
   margin: 5px 0;
 }
 
-/* Estilos para celulares pequenos */
+/* Estilos para celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
+  header .intro h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Reduz o espaçamento em telas muito pequenas */
   }
-  section {
-    margin-bottom: 2rem;
+
+  nav ul {
+    flex-direction: inherit;
+    font-size: 0.7em;
   }
-  section input {
-    width: 100%;
+
+  nav ul li {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens do menu */
   }
-  section {
-    margin-bottom: 1.2rem;
+
+  .cards {
+    flex-direction: column; /* As cards ficam empilhadas em uma coluna */
+    gap: 15px; /* Espaçamento entre as cards */
   }
+
+  .project-container {
+    grid-template-columns: 1fr; /* Exibe os projetos em uma única coluna */
+    gap: 15px; /* Ajuste no espaçamento entre os projetos */
+  }
+
   footer {
-    width: 100%;
+    padding: 1rem 0; /* Ajusta o espaçamento no rodapé */
   }
-  .cards .card {
-    width: 100%;
-    font-size: 1em;
-    display: flex;
+
+  .history, .project {
+    padding: 1rem; /* Ajusta o espaçamento interno nas seções */
   }
 }
 
-/* Estilos para celulares e tablets */
+/* Estilos para celulares e tablets pequenos (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+  header .intro h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* Ajusta o espaçamento para telas médias */
   }
-  section {
-    margin-bottom: 2rem;
+
+  nav ul {
+    flex-direction: column; /* Menu em coluna para tablets pequenos */
   }
+
+  nav ul li {
+    margin-bottom: 15px; /* Ajuste no espaçamento entre itens do menu */
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as cards em telas médias */
+  }
+
+  .project-container {
+    grid-template-columns: 1fr; /* Exibe os projetos em uma coluna */
+    gap: 20px; /* Ajuste no espaçamento entre projetos */
+  }
+
   footer {
-    width: 100%;
+    padding: 1.2rem 0; /* Espaçamento no rodapé para tablets pequenos */
   }
-  .cards .card {
-    width: 100%;
-    font-size: 1em;
-    display: flex;
-}
 }
 
-/* Estilos para tablets e pequenos laptops */
+/* Estilos para tablets maiores e laptops pequenos (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  h1 {
-    font-size: 5rem;
+  header .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
-  section {
+
+  nav ul {
+    flex-direction: row; /* Menu em linha */
+  }
+
+  .cards {
+    flex-direction: row; /* Cards lado a lado */
+    gap: 25px;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr); /* Exibe 2 projetos por linha */
+    gap: 25px; /* Espaçamento entre os projetos */
+  }
+
+  footer {
+    padding: 2rem 0;
+  }
+}
+
+/* Estilos para telas grandes (acima de 1025px) */
+@media (min-width: 1025px) {
+  header .intro h1 {
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+  }
+
+  main {
+    padding: 6rem 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
     margin-bottom: 3rem;
   }
-  section input {
-    width: 100%;
+
+  .cards {
+    gap: 10px;
   }
+
+  .project-container {
+    grid-template-columns: repeat(3, 1fr); /* Exibe 3 projetos por linha */
+  }
+
   footer {
-    width: 100%;
-  }
-  .cards .card {
-    flex-direction: column;
+    padding: 3rem 0;
   }
 }
 
-/* Estilos para telas maiores e TVs */
-@media (min-width: 1025px) {
-  h1 {
-    font-size: 5.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  nav {
-    font-size: 1.2rem;
-  }
-  section {
-    margin-bottom: 4rem;
-  } 
-  section input {
-    width: 100%;
-  }
-  footer {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-  .project img {
-    width: 60%;
-  }
-  .history {
-    font-size: 1.5rem;
-  }
 
-  .cards .card {
-    font-size: 1.4rem;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-  }
-}
+
