@@ -12,10 +12,26 @@ html {
 }
 
 body {
-  background-image: url(imagens/thumb-1920-533199.png);
-  animation: myAnimation 10s infinite;
+  background-color: rgb(24, 24, 24);
   color: white;
   font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  animation: myAnimation 10s infinite;
+
+  /*scroll-behavior: smooth;
+  overflow-x: hidden;*/
+}
+
+header {
+ background-image: url(imagens/thumb-1920-533199.png);
+ animation: myAnimation 30s infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 5px;
 }
 
 @keyframes myAnimation {
@@ -27,14 +43,9 @@ body {
   }
 }
 
-header {
-  text-align: center;
-  padding: 4rem 2rem;
-  margin: 5px;
-}
-
 header .intro h1 {
-  color: rgb(210, 38, 240);
+  font-family: monospace;
+  color: rgb(185, 40, 210);
   text-shadow: 1px 0.9px rgb(255, 255, 255);
   font-size: 3rem;
   margin-bottom: 1rem; 
@@ -59,9 +70,12 @@ header .btn:hover {
 nav ul {
   list-style: none;
   display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 30px;
+  right: 20px;*/
   justify-content: right;
  padding: 1em 0px;
-
 }
 
 nav ul li {
@@ -72,7 +86,7 @@ nav ul li a {
   text-decoration: none;
   color: rgb(245, 155, 209);
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -88,65 +102,103 @@ h2 {
   color: rgb(218, 145, 240);
   font-size: 2.5rem;
   font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 2rem; 
+  margin-bottom: 20px;
 }
 
 .history {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-bottom: 3rem; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 4rem 2rem;
+  margin: 5px;
 }
 
 .card-image {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  margin: 20px; /* Adiciona margem entre os cards */
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
 }
 
 .card-image img {
-  background-color: rgba(69, 69, 69, 0.468);
-  box-shadow: 3px 7px 10px rgba(215, 143, 228, 0.75);
-  width: 150px; /* Define a largura de cada card */
-  height: 150px; /* Define a altura de cada card */
-  margin: 10px; /* Adiciona margem entre as imagens */
-  border-radius: 5px; /* Arredonda os cantos dos cards */
-  object-fit: cover; /* Faz com que a imagem preencha todo o card, mantendo a proporção */
+ width: 120px;
+ height: 120px;
+ border-radius:50%;
+ object-fit: cover;
+ box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-image img:hover {
-  transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+  transform: scale(1.05);
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.5);
+}
 
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 150px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.skills-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.project {
+  background-color: rgba(22,22,22,0.7);
+  padding: 20px;
+  background-color: rgba(22,22,22,0.7);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-container {
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
   margin-bottom: 3rem; 
 }
 
-.project {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(22,22,22, 0.573);
-  box-shadow: 3px 7px 10px rgba(215, 143, 228, 0.75);
-  border-radius: 15px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.503);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .project img {
   max-width: 100%;
-  border-radius: 10px;
-  margin: 10px 0;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 a {
@@ -167,8 +219,11 @@ a:hover {
 }
 
 .icons {
-  list-style: none;
-  display: flex;
+display: flex;
+justify-content: center;
+gap: 15px;
+
+list-style: none;
 }
 
 .icons li {
@@ -219,6 +274,7 @@ footer p {
   nav ul {
     flex-direction: inherit;
     font-size: 0.7em;
+    
   }
 
   nav ul li {
@@ -239,7 +295,11 @@ footer p {
     padding: 1rem 0; /* Ajusta o espaçamento no rodapé */
   }
 
-  .history, .project {
+  .history {
+    text-align: center;
+  }
+
+  .project {
     padding: 1rem; /* Ajusta o espaçamento interno nas seções */
   }
 }
@@ -274,20 +334,42 @@ footer p {
   }
 }
 
+
 /* Estilos para tablets maiores e laptops pequenos (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1025px) {
   header .intro h1 {
-    font-size: 3rem;
+    font-size: 5.5rem;
     margin-bottom: 2rem;
+    padding: 20px
+  }
+
+  main {
+    padding: 6rem 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
 
   nav ul {
     flex-direction: row; /* Menu em linha */
   }
 
+  .history {
+    height: 100vh;
+   display: flex;
+  }
+
   .cards {
     flex-direction: row; /* Cards lado a lado */
     gap: 25px;
+    padding: 50px;
+  }
+
+  .projects {
+    height: 100vh;
+    display: flex;
   }
 
   .project-container {
@@ -314,6 +396,25 @@ footer p {
   h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .history {
+    height: 100vh;
+    display: flex;
+  }
+
+  .skills {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .cards {
