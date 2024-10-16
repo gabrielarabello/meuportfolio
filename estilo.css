@@ -22,7 +22,7 @@ body {
 }
 
 header {
- background-image: url(imagens/thumb-1920-533199.png);
+ background-image: url(imagens/imagemfundo1.png);
  animation: myAnimation 30s infinite;
   height: 100vh;
   display: flex;
@@ -44,16 +44,44 @@ header {
 }
 
 header .intro h1 {
-  font-family: monospace;
-  color: rgb(185, 40, 210);
-  text-shadow: 1px 0.9px rgb(255, 255, 255);
-  font-size: 3rem;
-  margin-bottom: 1rem; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  /*color: rgb(255, 246, 246);*/
+  /*font-size: 3rem;
+  margin-bottom: 1rem; */
+
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 
+    0 0 10px #fff, 
+    0 0 20px #ff00ff, 
+    0 0 30px #ff00ff, 
+    0 0 40px #ff00ff, 
+    0 0 50px #ff00ff;
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
+
+@keyframes neon {
+  from {
+    text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #ff00ff, 
+      0 0 30px #ff00c1;
+  }
+  to {
+    text-shadow: 
+      0 0 20px #fff, 
+      0 0 30px #ff00ff, 
+      0 0 50px #ff00c1, 
+      0 0 60px #ff00ff;
+  }
+}
+
 
 header .btn {
   padding: 10px 20px;
-  background-color: rgb(210, 38, 240);
+  background-color: #ff00c1;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -63,8 +91,9 @@ header .btn {
 }
 
 header .btn:hover {
-  background-color: #ff1074;
+  background-color: #00ffffe4;
   color: white;
+  font-weight: bolder;
 }
 
 nav ul {
@@ -73,9 +102,8 @@ nav ul {
   gap: 10px;
   position: absolute;
   top: 30px;
-  right: 20px;*/
-  justify-content: right;
- padding: 1em 0px;
+  right: 20px;
+  padding: 1em 0px;
 }
 
 nav ul li {
@@ -84,13 +112,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: rgb(245, 155, 209);
+  color: #ff00c1;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ff1074;
+  color:#00ffff;
 }
 
 main {
@@ -99,13 +127,14 @@ main {
 
 h2 {
   text-align: center;
-  color: rgb(218, 145, 240);
+  color: #ff00c1;
   font-size: 2.5rem;
   font-family: 'Times New Roman', Times, serif;
   margin-bottom: 20px;
 }
 
 .history {
+  font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -123,12 +152,12 @@ h2 {
 }
 
 .card-image img {
- width: 120px;
- height: 120px;
- border-radius:50%;
- object-fit: cover;
- box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
- transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 120px;
+  height: 120px;
+  border-radius:8px;
+  object-fit: cover;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-image img:hover {
@@ -162,7 +191,7 @@ h2 {
 
 .skill img:hover {
   transform: scale(1.05);
-  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 8px 16px #ff00c1;
 }
 
 .skill p {
@@ -173,12 +202,24 @@ h2 {
   text-align: center;
 }
 
+a{
+  color: #ff00c1;
+}
+
+a:hover {
+  color: #00ffff;
+}
+
+a::before {
+  color: #ff00ff;
+}
+
 .project {
-  background-color: rgba(22,22,22,0.7);
+  background-color: rgba(0, 0, 0, 0.185);
   padding: 20px;
-  background-color: rgba(22,22,22,0.7);
   border-radius: 10px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -192,7 +233,7 @@ h2 {
 
 .project:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px #ff00c1;
 }
 
 .project img {
@@ -200,15 +241,6 @@ h2 {
   border-radius: 8px;
   margin-top: 10px;
 }
-
-a {
-  color: rgb(180, 128, 228);
-}
-
-a:hover {
-  color: #ff1074;
-}
-
 
 .contatos {
   display: flex;
@@ -221,8 +253,7 @@ a:hover {
 .icons {
 display: flex;
 justify-content: center;
-gap: 15px;
-
+gap: 10px;
 list-style: none;
 }
 
@@ -240,14 +271,12 @@ list-style: none;
 .icons li a.fa-brands.fa-square-instagram,
 .icons li a.fa-brands.fa-linkedin,
 .icons li a.fa-brands.fa-square-github {
-  color: rgba(210,116,226);
+color: #ff00c1;
 }
 
 .icons li a:hover {
-  color: #ff1074;
   transform: scale(1.2);
 }
-
 
 footer {
   background-color: rgba(145, 145, 145, 0.14);
@@ -267,8 +296,12 @@ footer p {
 /* Estilos para celulares pequenos (até 480px) */
 @media (max-width: 480px) {
   header .intro h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem; /* Reduz o espaçamento em telas muito pequenas */
+  }
+
+  h2 {
+    font-size: 1.8rem;
   }
 
   nav ul {
@@ -309,6 +342,10 @@ footer p {
   header .intro h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem; /* Ajusta o espaçamento para telas médias */
+  }
+
+  h2 {
+    font-size: 1.8;
   }
 
   nav ul {
@@ -357,8 +394,10 @@ footer p {
   }
 
   .history {
+    font-size: 2.5rem;
+    letter-spacing: -3px;
     height: 100vh;
-   display: flex;
+    display: flex;
   }
 
   .cards {
@@ -378,7 +417,7 @@ footer p {
   }
 
   footer {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 }
 
@@ -394,39 +433,48 @@ footer p {
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 3rem;
   }
 
+  nav {
+    font-size: 1.3rem;
+  }
+
   .history {
+    font-size: 2.5rem;
+    letter-spacing: -3px;
     height: 100vh;
     display: flex;
   }
 
-  .skills {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .projects {
+.skills {
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
-  .cards {
-    gap: 10px;
+.projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .project-container {
+.project-container {
     grid-template-columns: repeat(3, 1fr); /* Exibe 3 projetos por linha */
   }
 
+.icons li a {
+    font-size: 3.5rem;
+  }
+
   footer {
-    padding: 3rem 0;
+    padding: 1.9rem 0;
+  }
+  footer p {
+    font-size: 1.8rem;
   }
 }
 
