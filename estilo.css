@@ -22,7 +22,7 @@ body {
 }
 
 header {
- background-image: url(imagens/imagemfundo.pngNesse);
+ background-image: url(imagens/imagemfundo.png);
  animation: myAnimation 30s infinite;
   height: 100vh;
   display: flex;
