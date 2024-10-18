@@ -6,6 +6,7 @@
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
   <header id="home">
@@ -25,44 +26,44 @@
   </header>
 
   <main>
-    <section class="history" id="sobre">
+    <section class="history" id="sobre"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
       <h2>Sobre Mim</h2>
       <p>Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonada por tecnologia e programação. Possuo conhecimentos sólidos em HTML, CSS e JavaScript, que me permitem criar interfaces web interativas e responsivas. Além disso, sou familiarizada com o uso de Git e GitHub para controle de versão, garantindo que meus projetos sejam bem organizados e colaborativos. Também utilizo a ferramenta GIMP para edição de imagens, o que me ajuda a aprimorar a estética dos meus trabalhos.
     </p>
     </section>
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skills"  data-aos="zoom-in">
       <h2>Skills</h2>
       <div class="card-image">
-        <div class="skill">
+        <div class="skill" data-aos="flip-left">
           <img src="imagens/imagem-html.png" alt="HTML">
           <p>HTML5</p>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="flip-left">
           <img src="imagens/imagem-css.png" alt="CSS">
           <p>CSS3</p>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="flip-left">
           <img src="imagens/imagem-js.png" alt="JavaScript">
           <p>JavaScript</p>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="flip-left">
           <img src="imagens/imagem-github.png" alt="GitHub">
           <p>GitHub</p>
         </div>
-          <div class="skill">
+          <div class="skill" data-aos="flip-left">
             <img src="imagens/imagem-word.png" alt="Word">
             <p>Word</p>
           </div>
-          <div class="skill">
+          <div class="skill" data-aos="flip-left">
             <img src="imagens/imagem-excel.png" alt="Excel">
             <p>Excel</p>
           </div>
-          <div class="skill">
+          <div class="skill" data-aos="flip-left">
             <img src="imagens/imagem-powerpoint.png" alt="PowerPoint">
             <p>PowerPoint</p>
           </div>
-          <div class="skill">
+          <div class="skill" data-aos="flip-left">
             <img src="imagens/imagem-gimp.png" alt="GIMP">
             <p>GIMP</p>
           </div>
@@ -70,23 +71,23 @@
     </section>
   </section>
 
-    <section class=projects id="projetos">
+    <section class=projects id="projetos" data-aos="flip-left">
       <h2>Projetos</h2>
       <div>
         <div class="project-container" >
-          <div class="project">
+          <div class="project" data-aos="zoom-in">
             <h3>Projeto Old Games</h3> <br>
             <p>Desenvolvido com a Alura na Imersão Dev com Google Gemini.<br> Criado com HTML, CSS e JavaScript !</p> <br>
              <a href="https://imersaocomgemini.vercel.app/"  target="_blank">Ver Projeto</a>
             <img src="imagens/imagem-site1.png" alt="Imagem do Meu Projeto">
           </div>
-          <div class="project">
+          <div class="project" data-aos="zoom-in">
             <h3>Projeto Redes Sociais</h3><br>
             <p>Desenvolvido com o Curso em Vídeo do Professor Gustavo Guanabara. <br>Criado com HTML e CSS !</p>
              <a href="https://projeto-social-olive-seven.vercel.app/"  target="_blank">Ver Projeto</a>
             <img src="imagens/imagem-site2.png" alt="Imagem do Meu Projeto">
           </div>
-          <div class="project">
+          <div class="project"  data-aos="zoom-in">
             <h3>Projeto Android</h3><br>
             <p>Desenvolvido com o Curso em Vídeo do Professor Gustavo Guanabara. <br>Criado com HTML e CSS !</p> 
              <a href="https://projeto-android-delta-ochre.vercel.app/"  target="_blank">Ver Projeto</a>
@@ -106,5 +107,13 @@
     </div>
     <p>&copy;2024 Todos os direitos reservados. <br>Desenvolvido por Gabriela Rabelo</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,  // Duração da animação (em ms)
+      once: true,       // A animação ocorre apenas uma vez
+    });
+  </script>
 </body>
 </html>
