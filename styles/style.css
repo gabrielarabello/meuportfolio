@@ -222,12 +222,35 @@ img {
         font-size: 20px;
     }
 
+    .apresentacao {
+        flex-direction: column-reverse; /* foto em cima, texto embaixo */
+        align-items: center;
+        padding: 10% 5%;
+        text-align: center;
+        gap: 40px; /* espaçamento entre a foto e o conteúdo */
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+        max-width: 600px;
+        gap: 20px; /* espaçamento interno entre título, subtítulo e links */
+    }
+
     .apresentacao__conteudo__titulo {
         font-size: 40px;
+        margin-top: 0;
     }
 
     .apresentacao__conteudo__subtitulo {
         font-size: 22px;
+        margin-top: 0;
+    }
+
+    .apresentacao > img {
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 20px; /* distância entre foto e conteúdo */
+        border-radius: 45px;
     }
 
     .apresentacao__links__link {
@@ -235,7 +258,12 @@ img {
         max-width: 320px;
         font-size: 20px;
     }
+
+    .apresentacao__projetos h2 {
+        font-size: 28px;
+    }
 }
+
 
 @media (max-width: 480px) {
     .cabecalho__menu {
