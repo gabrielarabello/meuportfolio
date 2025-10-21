@@ -43,6 +43,7 @@ body {
 .apresentacao {
     padding: 5% 15%;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
 }
@@ -55,7 +56,7 @@ body {
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 55px;
     font-family: var(--fonte-primaria);
 }
 
@@ -64,7 +65,7 @@ body {
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size:30px;
     font-family: var(--fonte-secundaria);
 }
 
